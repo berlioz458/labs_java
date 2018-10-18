@@ -47,6 +47,19 @@ public class recursion {
         }
     }
 
+    public static int max_index (ArrayList array) {
+        /*if (array.size() == 2)
+        {
+            return (int)((int)array.get(0) > (int)array.get(1) ? array.get(0) : array.get(1));
+        }
+        array.remove(0);
+        ArrayList l2 = array;
+        int sub_max = max_index(l2);
+        return (int)array.get(0) > sub_max ? (int) array.get(0) : sub_max;*/
+        //какая-то херня
+        return 0;
+    }
+
     public static void main(String[] args) {
         int X;
         X = factorial(11);
@@ -61,9 +74,9 @@ public class recursion {
         //int SUMMA = summa_array(A);
         //System.out.println(SUMMA);
         int B = 0;
-        int INDEX = summ_index(A);
-        System.out.println(INDEX);
+        //int INDEX = summ_index(A);
+        //System.out.println(INDEX);
+        int M = max_index(A);
+        System.out.println(M);
     }
-
-
 }
