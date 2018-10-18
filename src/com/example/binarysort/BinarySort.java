@@ -7,19 +7,19 @@ import java.lang.Math;
 
 public class BinarySort {
 
-    public static int binary_search(int a[], int X)
+    public static int binary_search(ArrayList a, int X)
     {
         int low = 0;
-        int high = a.length - 1;
+        int high = a.size() - 1;
         int mid = 0;
 
         while (low <= high)
         {
             mid = (low + high) / 2;
-            int guess = a[mid];
+            int guess = (int)a.get(mid);
             if (guess == X)
             {
-                System.out.println(mid);
+                System.out.println("Position: " + mid);
                 return mid;
             }
             if (guess < X)
@@ -103,11 +103,11 @@ public class BinarySort {
         print_array(A);
         A = sort_array(A);
         print_array(A);
-        /*Scanner in = new Scanner(System.in);
+        Scanner in = new Scanner(System.in);
         int Magic = in.nextInt();
 
         binary_search(A, Magic);
-        O_O(Magic);
+        /*O_O(Magic);
         O_O(1000000000);*/
     }
 
