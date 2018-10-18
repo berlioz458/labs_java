@@ -32,6 +32,21 @@ public class recursion {
         //return (int) summa_array(array[array.length-1]);
     }
 
+    public static int summ_index (ArrayList list)
+    {
+        if (list.size() == 1)
+        {
+
+            return 1;
+        }
+        else
+        {
+
+            list.remove(0);
+            return 1 + summ_index(list);
+        }
+    }
+
     public static void main(String[] args) {
         int X;
         X = factorial(11);
@@ -42,8 +57,12 @@ public class recursion {
         A.add(3);
         A.add(9);
         A.add(8);
-        int SUMMA = summa_array(A);
-        System.out.println(SUMMA);
+        A.add(3);
+        //int SUMMA = summa_array(A);
+        //System.out.println(SUMMA);
+        int B = 0;
+        int INDEX = summ_index(A);
+        System.out.println(INDEX);
     }
 
 
